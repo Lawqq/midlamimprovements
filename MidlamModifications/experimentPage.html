@@ -1,0 +1,168 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<!-- This is a comment tag -->
+		<meta charset="UTF-8" />
+		<title>Liverpool John Moores University</title>
+		<link rel="stylesheet" href="ljmu.css" type="text/css" media="screen,projection" />
+		<script src="jquery-2.2.0.min.js"></script>
+		<script src="experiment.js"></script>
+		<script>
+			
+			getResults();
+			var errors = 0;
+			var loadDate;
+			$(document).ready(function() {
+				// Get the load time
+				loadDate = new Date();
+				
+				$("*").click(function(e) {
+					// Stop the function propagating up the DOM tree
+					e.stopPropagation();
+					
+					// Get the interaction time
+					var intDate = new Date();
+					
+					// Check if this is the link we want
+					if ($(this).data("islink") != undefined)
+					{
+						// The right link has been clicked
+						var iTime = intDate.getTime() - loadDate.getTime() - benchmarkDate();
+						
+						// Load the next page with the data we want to send
+						callNextPage("feedbackPage.html", "exp1-errors:" + errors, "exp1-iTime:" + iTime);
+					}
+					else
+					{
+						// An incorrect part of the page has been clicked
+						errors++;
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<img src="header.jpg" alt="" /><div>
+			<ul class="navBar">
+				<li>Study<ul>
+					<li>Undergraduate students<ul>
+						<li>Search courses</li>
+						<li>Order a prospectus</li>
+						<li>Visit us</li>
+						<li>Scholarships, bursaries and fees</li>
+						<li>Information for applicants</li>
+						<li>Services for schools, colleges and prospective students</li>
+						<li>How to apply</li>
+					</ul></li>
+					<li>Postgraduate students<ul>
+						<li>Choosing the right course</li>
+						<li>Inspirational postgraduate students</li>
+						<li>Search courses</li>
+						<li>Research opportunities</li>
+						<li>Financing your study</li>
+						<li>Order a prospectus</li>
+						<li>Postgraduate events</li>
+						<li>Resources, facilities and support</li>
+						<li>How to apply</li>
+					</ul></li>
+					<li>International students<ul>
+						<li>Why LJMU?</li>
+						<li>International prospectus</li>
+						<li>Study options</li>
+						<li>Search courses</li>
+						<li>Step by step guide</li>
+						<li>Events in your country</li>
+						<li>Financing your study</li>
+						<li>Visa information</li>
+						<li>How to apply</li>
+					</ul></li>
+					<li>Continuing Professional Development<ul>
+						<li>Browse continuing professional development courses</li>
+						<li>How to apply</li>
+					</ul></li>
+				</ul></li>
+				<li>Discover<ul>
+					<li>Your student experience<ul>
+						<li>Life at LJMU</li>
+						<li>Accommodation</li>
+						<li>Careers</li>
+						<li>Go abroad</li>
+						<li>Sports, clubs and societies</li>
+						<li>Your campus</li>
+						<li>Managing your money</li>
+						<li>Student opportunities</li>
+						<li>Alumni</li>
+					</ul></li>
+					<li>Liverpool<ul>
+						<li>Culture</li>
+						<li>Sport</li>
+						<li>History</li>
+						<li>Events</li>
+						<li>Socialising in the city</li>
+						<li>Beyond the city</li>
+					</ul></li>
+					<li>Targeted Support<ul>
+						<li>Care leavers</li>
+						<li>Estranged students</li>
+						<li>Young adult carers</li>
+						<li data-islink="link">Students with a disability</li>
+						<li>International student support</li>
+						<li>Health and wellbeing</li>
+						<li>Study skills</li>
+					</ul></li>
+				</ul></li>
+				<li>Research<ul>
+					<li>World-leading Research</li>
+					<li>Research areas</li>
+					<li>Current research opportunities</li>
+					<li>PhD scholarships</li>
+					<li>Research collaboration/partnership</li>
+					<li>Impact/achievements</li>
+					<li>Facilities and support</li>
+					<li>Graduate School</li>
+				</ul></li>
+				<li>Business<ul>
+					<li>Case studies</li>
+					<li>Research expertise</li>
+					<li>Work with us</li>
+					<li>Get involved with LJMU</li>
+					<li>Advertise your job opportunities</li>
+					<li>Open Labs</li>
+					<li>Centre for Entrepreneurship</li>
+					<li>Lairdside Maritime Centre</li>
+				</ul></li>
+				<li>About us<ul>
+					<li>About Liverpool John Moores University</li>
+					<li>Our vision</li>
+					<li>Our strategy</li>
+					<li>University Structure</li>
+					<li>Governance & charitable status</li>
+					<li>History</li>
+					<li>Academic partnership</li>
+					<li>Public information</li>
+					<li>Staff Profiles</li>
+					<li>Office of the Vice Chancellor</li>
+					<li>Faculties</li>
+					<li>Professional Services</li>
+					<li>Vacancies at LJMU</li>
+					<li>Fellows</li>
+					<li>Sustainability</li>
+					<li>Corporate charities</li>
+					<li>Cultural partnerships</li>
+					<li>Roscoe Lecture series</li>
+					<li>News</li>
+					<li>Events</li>
+					<li>Press and media</li>
+					<li>Press Releases</li>
+					<li>Donate</li>
+				</ul></li>
+				<li>Contact us<ul>
+					<li>Find us</li>
+					<li>Key contacts</li>
+					<li>Freedom of information</li>
+				</ul></li>
+			</ul>
+		</div>
+		<img src="mainBody.jpg" alt="" />
+	</body>
+</html>

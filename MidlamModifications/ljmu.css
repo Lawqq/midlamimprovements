@@ -1,0 +1,123 @@
+/* This is a CSS comment */
+* {
+	padding:0;
+	margin:0;
+}
+body {
+	font-family: Arial, Verdana, sans-serif;
+	font-style: normal;
+	font-size: 100%;
+	background-color: white;
+}
+img {
+	width: 100%;
+}
+.navBar > li
+{
+    float: left;
+}
+.navBar li
+{
+    list-style-type: none;
+    color: #5c606c;
+	padding: 2px 20px;
+	font-size: 1.25rem;
+	background-color: #fff;
+	border-bottom: 1px solid #999999;
+}
+.navBar ul
+{
+    display: none;
+    position: absolute;
+    margin-left: -3px;
+    margin-top: 2px;
+}
+.navBar li:hover > ul
+{
+    display: block;
+}
+.navBar ul.parent_hover
+{
+    display: block;
+}
+.navBar a
+{
+    color: black;
+    background: none;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+.navBar li:hover
+{
+    color: #2196da;
+	background-color: #f2f2f2;
+}
+.navBar li.hover,
+.navBar a:hover
+{
+    color: #2196da;
+	background-color: #f2f2f2;
+}
+.navBar ul ul
+{
+    margin-top: -1.2em;
+    left: 99%;
+}
+.navBar span
+{
+    display: block;
+}
+.navbar
+{
+    float: left;
+    width: 100%;
+    color: black;
+    background-color: #6699FF;
+}
+.endmenu
+{
+    clear: left;
+}
+/*
+.navBar {
+	background-color: #fff;
+	margin-left: 25%;
+	text-align: center;
+}
+.navBar li{
+	list-style-type: none;
+	float: left;
+	color: #5c606c;
+	padding: 0 10px;
+	margin: 0 20px;
+	font-size: 1.25rem;
+}
+.navBar li:hover {
+	color: #2196da;
+	background-color: #f2f2f2;
+}
+.navBar ul {
+	display: none;
+	position: absolute;
+	margin-left: -2px;
+}
+.navmenu li:hover > ul
+{
+  display: block;
+}
+.navBar ul li {
+	float: left;
+}
+.navBar + * {
+	clear: left;
+}
+.navBar ul ul {
+	margin-top: -1.2em;
+	left: 99%;
+} */
+div {
+	min-height: 23px;
+	width: 100%;
+}
+
